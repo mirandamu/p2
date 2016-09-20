@@ -14,20 +14,20 @@ ini_set('display_errors', 1);
 <body>
    <p>Required = *</p>
     <form method="POST" action="index.php">  
-        <label for="numword">How many words would you like in your password? (Max 9)</label>
-        <input type="number" name="numword" min="1" max="9"><span> *</span><br>
+        <label for="numWord">How many words would you like in your password? (Max 9)</label>
+        <input type="number" name="numWord" min="1" max="9"><span> *</span><br>
         
-        <label for="numcheck">Add a number</label>
-        <input type="checkbox" name="numcheck"><br>
+        <label for="numCheck">Add a number</label>
+        <input id="numCheck" type="checkbox" name="numCheck"><br>
         
-        <label for="numnum">How many numbers would you like in your password? (Max 10)</label>
-        <input type="number" name="numnum" min="1" max="10"><br>
+        <label for="numNum">How many numbers would you like in your password? (Max 10)</label>
+        <input type="number" name="numNum" min="1" max="10"><br>
         
-        <label for="symcheck">Add a special symbol</label>
-        <input type="checkbox" name="symcheck"><br>
+        <label for="symCheck">Add a special symbol</label>
+        <input id="symCheck" type="checkbox" name="symCheck"><br>
         
-        <label for="numsym">How many symbols would you like in your password? (Max 6)</label>
-        <input type="text" name="numsym"><br>
+        <label for="numSym">How many symbols would you like in your password? (Max 6)</label>
+        <input type="number" name="numSym" min="1" max="6"><br>
         
         <input type="submit" name="go" value="Generate your password!"><br>
     </form>
@@ -58,5 +58,15 @@ ini_set('display_errors', 1);
     <?php if(isset($error9)): ?>
         <div class="error"><?php echo $error9; ?></div>
     <?php endif ?>
+    <br><br>
+    <table>
+        <tr>
+            <td>placeholder</td>
+        </tr>
+        <tr>
+            <td>another</td>
+            <td>one</td>
+        </tr>
+    </table>
 </body>
 </html>
