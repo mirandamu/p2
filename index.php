@@ -12,17 +12,51 @@ ini_set('display_errors', 1);
     <?php require("generator.php"); ?>
 </head>
 <body>
+   <p>Required = *</p>
     <form method="POST" action="index.php">  
         <label for="numword">How many words would you like in your password? (Max 9)</label>
-        <input type="number" name="numword" min="1" max="9"><br>
+        <input type="number" name="numword" min="1" max="9"><span> *</span><br>
+        
         <label for="numcheck">Add a number</label>
         <input type="checkbox" name="numcheck"><br>
+        
+        <label for="numnum">How many numbers would you like in your password? (Max 10)</label>
+        <input type="number" name="numnum" min="1" max="10"><br>
+        
         <label for="symcheck">Add a special symbol</label>
         <input type="checkbox" name="symcheck"><br>
+        
+        <label for="numsym">How many symbols would you like in your password? (Max 6)</label>
+        <input type="text" name="numsym"><br>
+        
         <input type="submit" name="go" value="Generate your password!"><br>
     </form>
     <?php if(isset($error)): ?>
         <div class="error"><?php echo $error; ?></div>
+    <?php endif ?>
+    <?php if(isset($error2)): ?>
+        <div class="error"><?php echo $error2; ?></div>
+    <?php endif ?>
+    <?php if(isset($error3)): ?>
+        <div class="error"><?php echo $error3; ?></div>
+    <?php endif ?>
+    <?php if(isset($error4)): ?>
+        <div class="error"><?php echo $error4; ?></div>
+    <?php endif ?>
+    <?php if(isset($error5)): ?>
+        <div class="error"><?php echo $error5; ?></div>
+    <?php endif ?>
+    <?php if(isset($error6)): ?>
+        <div class="error"><?php echo $error6; ?></div>
+    <?php endif ?>
+    <?php if(isset($error7)): ?>
+        <div class="error"><?php echo $error7; ?></div>
+    <?php endif ?>
+    <?php if(isset($error8)): ?>
+        <div class="error"><?php echo $error8; ?></div>
+    <?php endif ?>
+    <?php if(isset($error9)): ?>
+        <div class="error"><?php echo $error9; ?></div>
     <?php endif ?>
 </body>
 </html>
