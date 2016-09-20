@@ -2,7 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+$newPw = "";
+
 function generatePassword($numWord, $numCheck, $numNum, $symCheck, $numSym) {
+    global $newPw;
+    
     $pwGen = array();
     
     $wordList = file("words.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -33,7 +37,6 @@ function generatePassword($numWord, $numCheck, $numNum, $symCheck, $numSym) {
 
     shuffle($pwGen);
     $newPw = join("-", $pwGen);
-    echo $newPw;
 }
 
 $numWord = "";
@@ -98,4 +101,6 @@ if(isset($_POST["go"])){
     }
 
     generatePassword($numWord, $numCheck, $numNum, $symCheck, $numSym);
+    
+    return $newPw;
 }

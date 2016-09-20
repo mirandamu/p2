@@ -12,7 +12,6 @@ ini_set('display_errors', 1);
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css" />
     <?php require("generator.php"); ?>
 </head>
@@ -79,9 +78,15 @@ ini_set('display_errors', 1);
             <?php endif ?><br><br>
         </fieldset>
         
-        <input type="submit" name="go" value="Generate your password!"><br>
+        <input type="submit" name="go" value="Generate your password!">
     </form>
     
-    <br><br>
+    <br>
+    <div id="pwbox">
+        <?php if(isset($newPw)): ?>
+            <span id="newpw"><?php echo $newPw; ?></span>
+        <?php endif ?>
+    </div>
+       
 </body>
 </html>

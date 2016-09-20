@@ -1,0 +1,30 @@
+html {
+    background-color: #f28d8d;
+    padding-top: 7rem;
+}
+
+body {
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    padding: 5rem;
+}
+
+.requiredast {
+    color: #f00;
+}
+
+.error {
+    color: #f00;
+    font-weight: bold;
+} 
+
+#pwbox {
+    background-color: #fff7b3;
+    padding: 1rem;
+    text-align: center;
+}
+
+#newpw {
+    font-size: 4rem;
+}
